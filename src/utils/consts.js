@@ -1,3 +1,3 @@
 export const DEVICE_ROUTE = '/device'
-export const BUSKET_ROUTE = '/bucket'
+export const BASKET_ROUTE = '/basket'
 export const SHOP_ROUTE = '/'

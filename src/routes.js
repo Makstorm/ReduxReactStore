@@ -1,7 +1,7 @@
-import BusketPage from "./pages/Busket"
+import BasketPage from "./pages/Basket"
 import DevicePage from "./pages/DevicePage"
 import Shop from "./pages/Shop"
-import { DEVICE_ROUTE, BUSKET_ROUTE, SHOP_ROUTE } from "./utils/consts"
+import { DEVICE_ROUTE, BASKET_ROUTE, SHOP_ROUTE } from "./utils/consts"
 
 
 export const publicRoutes = [
@@ -11,8 +11,8 @@ export const publicRoutes = [
     },
 
     {
-        path: BUSKET_ROUTE,
-        Component: BusketPage
+        path: BASKET_ROUTE,
+        Component: BasketPage
     },
 
     {

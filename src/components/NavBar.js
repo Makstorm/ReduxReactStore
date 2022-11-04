@@ -1,11 +1,11 @@
 import React from 'react'
 
-const BusketPage = () => {
+const NavBar = () => {
   return (
     <div>
-      
+      NavBar
     </div>
   )
 }
 
-export default BusketPage;
+export default NavBar
