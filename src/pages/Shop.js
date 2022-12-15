@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import DeviceList from '../components/DeviceList';
-import FilterBar from '../components/FilterBar';
-import PropertiesBar from '../components/PropertiesBar';
+import SearchBar from '../components/SearchBar';
+
+import { loadDevices } from '../features/devices/deviceSlice';
 
 const Shop = () => {
+
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(loadDevices())
+  },[dispatch])
+
+  
+
   return (
     <div className='mainPage'>
-      <PropertiesBar />
-      <FilterBar />
+      <SearchBar />
       <DeviceList />
     </div>
   )

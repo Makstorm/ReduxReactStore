@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const loadDevices = createAsyncThunk(
     'allDevices/getAllRecipes',
     async () => {
-        const data = await fetch('');
+        const data = await fetch('https://fakestoreapi.com/products?limit=5');
         const json = await data.json();
         return json;
     }
@@ -35,3 +35,5 @@ export const devicesSlice = createSlice({
 })
 
 export default devicesSlice.reducer
+
+export const selectDevices = (state) => state.devices.devices
