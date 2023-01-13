@@ -51,11 +51,12 @@ body {
 .nav {
     background: #FFFFFF;
     display: flex;
-    margin: 1rem;
+    
     width: 4.5rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem;
     padding: 0.5rem;
     gap: 0.625rem;
     border-radius: 0.5rem;
@@ -96,6 +97,7 @@ body {
     &::-webkit-scrollbar {
         width: 3px;
         
+        
       }
       
     &::-webkit-scrollbar-track {
@@ -107,12 +109,13 @@ body {
         background-color: black;    /* цвет бегунка */
         border-radius: 20px;       /* округлось бегунка */
         margin: 3px;/* отступ вокруг бегунка */
+        cursor: pointer;
     }
 }
 
 .deviceList {
     
-    
+    padding: 0 0.5rem 0 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     align-content: flex-start;

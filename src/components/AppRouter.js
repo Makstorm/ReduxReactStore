@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import NavBar from './NavBar'
 import { publicRoutes } from '../routes'
 import { SHOP_ROUTE } from '../utils/consts';
+import SideFunctionalBar from './SideFunctionalBar';
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
           )}
           <Route path='*' element={<Navigate to={SHOP_ROUTE} />}/>
       </Routes>
+      <SideFunctionalBar/>
     </div>
   )
 }
