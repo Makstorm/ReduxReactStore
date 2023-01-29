@@ -24,11 +24,25 @@ export const userSlice = createSlice({
     initialState: {
         isAuth: false,
         user: {},
+        preCart: {},
         cart: [],
         isLoading: false,
         hasError: false
     },
     reducers: {
+        addPreCartItem: (state, action) => {
+            return {
+                ...state,
+                preCart: action.payload
+            }
+        },
+        removePreCartItem: (state, action) => {
+            return {
+                ...state,
+                preCart: {}
+            }
+        },
+
         addItemToCart: (state, action) => {
             state.cart.push({ 
                 ...action.payload, 
@@ -58,5 +72,6 @@ export const userSlice = createSlice({
 })
 
 export default userSlice.reducer
-export const { addItemToCart, removeItemFromCart } = userSlice.actions
+export const { addItemToCart, removeItemFromCart, addPreCartItem, removePreCartItem } = userSlice.actions
 export const selectUserCart = (state) => state.users.cart
+export const selectPreCartItem = (state) => state.users.preCart
