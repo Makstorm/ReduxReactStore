@@ -1,0 +1,63 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+}
+
+.overlayOut {
+    visibility: visible;
+    opacity: 1;
+    
+    .drawer {
+        transform: translateX(0); 
+    }
+}
+
+.drawer {
+    position: absolute;
+    width: 385px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+    p {
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+      margin: 0;
+    }
+  
+    .drawerTop {
+  
+      img {
+        cursor: pointer;
+      }
+  
+      margin: 30px 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .cartItems {
+      overflow: auto;
+      margin-bottom: 40px;
+    }
+  
+  }
